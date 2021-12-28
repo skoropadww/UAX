@@ -16,6 +16,7 @@
 
 //<Шрифт по умолчанию>==========================================================================================
 $fontFamily: "Montserrat", sans-serif;
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 $fontSize: 16;
 //</Шрифт по умолчанию>==========================================================================================
 
@@ -41,11 +42,13 @@ $dark-500: #1D1B1F;
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
+
 body {
   background-color: $mainWhite;
 	color: $mainColor;
   line-height: 1.4;
   font-weight: 400;
+  letter-spacing: 0.05em;
 	&._lock {
 		overflow: hidden;
 	}

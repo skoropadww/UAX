@@ -57,7 +57,7 @@
     font-size: 18px;
     font-weight: 700;
     color: $mainWhite;
-    padding-right: 14px;
+    padding: 10px 14px 20px 0;
     font-family: $fontFamily;
     position: relative;
 
@@ -71,8 +71,7 @@
       background-position: center;
       background-size: cover;
       right: 4px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 16px;
     }
   }
 
@@ -136,7 +135,29 @@
   &__bottom {
     padding: 12px 0;
     background-color: $mainColor;
-    color: $mainWhite
+    color: $mainWhite;
+    font-size: 15px;
+  }
+
+  &__catalog {
+    font-weight: 700;
+    font-size: 26px;
+    color: $mainWhite;
+    padding-left: 33px;
+    position: relative;
+    display: block;
+      
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 24px;
+      height: 21px;
+      background-image: url(.././img/icons/catalog_icon.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
   &__inner {
@@ -149,9 +170,69 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+  }
+}
+
+.tel-hover {
+  position: absolute;
+  background-color: $mainWhite;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.4;
+  padding: 56px 26px 36px 71px;
+  border-radius: 10px ;
+  left: -221px;
+  top: 45px;
+  z-index: -1;
+  opacity: 0;
+  overflow: hidden;
+  transition:opacity 0.3s ease-in;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 0px;
+    border-left-width: 45px;
+    border-bottom: 37px solid $mainWhite;
+    top: -25px;
+    right: 0;
+    transition:opacity 0.3s ease-in;
+
   }
 
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
+  &__phone {
+    font-weight: 400;
+
+    span {
+      padding-left: 11px;
+      position: relative;
+      &::before {
+        content: '-';
+        position: absolute;
+        left: 0;
+        top: -2px;
+      }
+    }
+  }
+}
+
+.header__top-tel:hover {
+  .tel-hover {
+    opacity: 1;
+    overflow: visible;
+    z-index: 5;
+    &::before {
+      opacity: 1;
+    }
+  }
 }
 
 .search {
@@ -215,5 +296,17 @@
 
   &::after {
     right: 0;
+  }
+}
+
+
+// ****************   manufacturer__list
+.manufacturer__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  li {
+    margin: 0 13px;
   }
 }

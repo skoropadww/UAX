@@ -111,6 +111,7 @@ body {
   color: #000;
   line-height: 1.4;
   font-weight: 400;
+  letter-spacing: 0.05em;
 }
 body._lock {
   overflow: hidden;
@@ -818,7 +819,7 @@ body.ie ._ibg img {
   font-size: 18px;
   font-weight: 700;
   color: #fff;
-  padding-right: 14px;
+  padding: 10px 14px 20px 0;
   font-family: "Montserrat", sans-serif;
   position: relative;
 }
@@ -832,8 +833,7 @@ body.ie ._ibg img {
   background-position: center;
   background-size: cover;
   right: 4px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 16px;
 }
 .header__top-course {
   font-family: "Montserrat", sans-serif;
@@ -890,6 +890,26 @@ body.ie ._ibg img {
   padding: 12px 0;
   background-color: #000;
   color: #fff;
+  font-size: 15px;
+}
+.header__catalog {
+  font-weight: 700;
+  font-size: 26px;
+  color: #fff;
+  padding-left: 33px;
+  position: relative;
+  display: block;
+}
+.header__catalog::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 24px;
+  height: 21px;
+  background-image: url(.././img/icons/catalog_icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .header__inner {
   display: flex;
@@ -900,6 +920,61 @@ body.ie ._ibg img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.tel-hover {
+  position: absolute;
+  background-color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.4;
+  padding: 56px 26px 36px 71px;
+  border-radius: 10px;
+  left: -221px;
+  top: 45px;
+  z-index: -1;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in;
+}
+.tel-hover::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 0px;
+  border-left-width: 45px;
+  border-bottom: 37px solid #fff;
+  top: -25px;
+  right: 0;
+  transition: opacity 0.3s ease-in;
+}
+.tel-hover__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.tel-hover__phone {
+  font-weight: 400;
+}
+.tel-hover__phone span {
+  padding-left: 11px;
+  position: relative;
+}
+.tel-hover__phone span::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.header__top-tel:hover .tel-hover {
+  opacity: 1;
+  overflow: visible;
+  z-index: 5;
+}
+.header__top-tel:hover .tel-hover::before {
+  opacity: 1;
 }
 
 .search {
@@ -957,6 +1032,15 @@ body.ie ._ibg img {
 }
 .course::after {
   right: 0;
+}
+
+.manufacturer__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.manufacturer__list li {
+  margin: 0 13px;
 }
 
 .page {
