@@ -65,14 +65,14 @@
 	}
 	// .popup__close
 	&__close {
-		width: 15px;
-		height: 15px;
+		width: 26px;
+		height: 25px;
 		position: absolute;
 		top: 0px;
 		right: 0px;
 		cursor: pointer;
 		z-index: 30;
-		background: url("../img/icons/close.svg") 0 0 no-repeat;
+		background: url(".././img/icons/close.svg") 0 0 no-repeat;
 	}
 }
 //====================================================================================================

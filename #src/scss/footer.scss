@@ -1,5 +1,114 @@
 footer {
+  background-color: $mainColor;
+  font-size: 13px;
+  line-height: 145%;
+  padding: 100px 0;
+  color: $mainWhite;
+
+
+}
+//====================================================================================================
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 //====================================================================================================
 
-//====================================================================================================
+.footer-box {
+  &__title {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .tel-hover__item {
+    padding-top: 20px;
+  }
+
+  .tel-hover__phone, 
+  .tel-hover__phone a {
+    color: $mainWhite;
+    transition: color 0.3s ease-in;
+  }
+
+  .tel-hover__phone a {
+    &:hover {
+      color: $pink-500;
+    }
+  }
+
+  .tel-hover__phone span{
+    position: relative;
+    padding-left: 11px;
+
+    &::before {
+      content: '-';
+      position: absolute;
+      left: 0;
+      top: -2px;
+    }
+  }
+
+  &__wrapper-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__link {
+    color: $mainWhite;
+    transition: color 0.3s ease-in;
+
+    &:hover {
+      color: $pink-500;
+    }
+  }
+
+  &__telegram-link {
+    margin: 40px 0 50px;
+  }
+}
+
+.telegram-link {
+  position: relative;
+  font-size: 13px;
+  line-height: 112%;
+  padding: 15px 44px 13px 10px;
+  color: $mainWhite;
+  background-color: $telegram;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    right: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(.././img/icons/telegram-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    border-radius: 50%;
+    border: 2px solid $mainWhite;
+  }
+
+  &--dark {
+    border-color: $mainWhite ;
+    background-color: transparent;
+
+    &::after {
+      background-color: $telegram;
+      border-color:transparent ;
+    }
+  }
+
+  &--facebook {
+
+  }
+}

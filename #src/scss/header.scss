@@ -173,6 +173,10 @@
     position: relative;
   }
 
+  &__inform {
+    position: relative;
+  }
+
   &__inform-link {
     color: $mainWhite;
     position: relative;
@@ -192,21 +196,22 @@
     }
   }
 }
-
-.tel-hover {
+// /************* Выпадашка с номерами телефонов 
+.header__top-tel .tel-hover {
   position: absolute;
   background-color: $mainWhite;
   font-weight: 700;
   font-size: 13px;
   line-height: 1.4;
   padding: 56px 26px 36px 71px;
-  border-radius: 10px ;
+  border-radius: 10px;
   left: -221px;
   top: 45px;
   z-index: -1;
   opacity: 0;
   overflow: hidden;
-  transition:opacity 0.3s ease-in;
+  transition:opacity 0.2s ease-in;
+  box-shadow: 0px 0px 14px rgba(149, 150, 150, 0.2);
 
   &::before {
     content: '';
@@ -219,7 +224,7 @@
     border-bottom: 37px solid $mainWhite;
     top: -25px;
     right: 0;
-    transition:opacity 0.3s ease-in;
+    transition:opacity 0.2s ease-in;
 
   }
 
@@ -318,7 +323,6 @@
   }
 }
 
-
 // ****************   manufacturer__list
 .manufacturer__list {
   display: flex;
@@ -355,8 +359,10 @@
 
 // ****************  client header link
 .client {
+  position: relative;
   display: flex;
   align-items: center;
+  padding-left: 20px;
 
   &__vip-text {
     font-size: 12px;
@@ -384,5 +390,68 @@
     &:hover {
       background-color: $pink-500;
     }
+  }
+
+  &__btn.active {
+    background-color: $pink-500;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -13px;
+    width: 2px;
+    height: 62px;
+    background-color: $dark-500;
+  }
+}
+
+.header-inform {
+  position: absolute;
+  padding: 24px 35px 35px 35px;
+  box-shadow: 0px 0px 14px rgba(149, 150, 150, 0.2);
+  background-color: $mainWhite;
+  border-radius: 10px;
+  min-width: 266px;
+  top: 41px;
+  left: -135px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+  transition: opacity 0.3s ease-in;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+
+  &__link {
+    font-size: 13px;
+    line-height: 31px;
+    color: $mainColor;
+    transition: color 0.1s ease-in;
+
+    &:hover {
+      color: $pink-500;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url(.././img/icons/arrow-top-menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 16px;
+    right: 53px;
+    top: 10px;
+  }
+}
+
+.header__inform:hover {
+  .header-inform {
+    opacity: 1;
+    overflow: visible;
+    z-index: 5;
   }
 }
