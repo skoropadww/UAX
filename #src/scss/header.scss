@@ -71,7 +71,7 @@
       background-position: center;
       background-size: cover;
       right: 4px;
-      top: 16px;
+      top: 14px;
     }
   }
 
@@ -171,6 +171,25 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+  }
+
+  &__inform-link {
+    color: $mainWhite;
+    position: relative;
+    padding: 0 14px 21px 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 7px;
+      background-image: url(.././img/icons/arrow-little.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      right: 0;
+      top: 7px;
+    }
   }
 }
 
@@ -308,5 +327,62 @@
 
   li {
     margin: 0 13px;
+  }
+
+  li a {
+    color: $mainWhite;
+  }
+
+  li:last-child {
+
+    a {
+      padding-right: 10px;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: '+';
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        color: #fff;
+        right: 0;
+        top: 1px;
+      }
+    }
+  }
+}
+
+// ****************  client header link
+.client {
+  display: flex;
+  align-items: center;
+
+  &__vip-text {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $pink-500;
+    padding: 4px 6px;
+    border-radius: 20px;
+    background-color: $dark-500;
+    margin-right: 12px;
+  }
+
+  &__btn {
+    background-image: url(.././img/icons/user-icon.svg);
+    width: 36px;
+    height: 36px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-color: transparent;
+    transition: background-color 0.3s linear;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: $pink-500;
+    }
   }
 }
