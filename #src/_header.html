@@ -1,9 +1,11 @@
 <header class="header">
 	<div class="header__top">
-    <div class="header__container _container">
-      <div class="header__inner">
-        <img src="./img/icons/logo.svg" alt="Логотип сайта" class="logo">
-        <form class="header__top-search search" action="#">
+    <div class="header__container _container _container--header">
+      <div class="header__inner header__inner--header">
+        <a href="#" class="logo">
+          <img src="./img/icons/logo.svg" alt="Логотип сайта" class="logo">
+        </a>
+        <form class="header__top-search search " action="#" data-da=".header__inner--bottom,768,0">
           <input class="search__input" type="text" name="Поиск товара" placeholder="Поиск товара">
           <button class="search__btn"></button>
         </form>
@@ -60,8 +62,16 @@
 	</div>
   <div class="header__bottom">
     <div class="header__container _container">
-      <div class="header__inner">
-        <a class="header__catalog" href="#">Каталог</a>
+      <div class="header__inner header__inner--bottom">
+        <div class="header__catalog">
+          <a class="header__catalog-link" href="#">Каталог</a>
+          <div class="icon-menu icon-menu--catalog">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
         <ul class="manufacturer__list">
           <li><a href="#">Apple</a></li>
           <li><a href="#">Samsung</a></li>
@@ -94,7 +104,7 @@
             </ul>
           </div>
         </div>
-        <div class="header__client client">
+        <div class="header__client client" data-da=".header__inner--header,768,2">
           <div class="client__vip-text">VIP</div>
           <div class="client__name">Иван Иванов</div>
           <a class="client__btn _popup-link" href="#login"></a>

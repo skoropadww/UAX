@@ -70,7 +70,7 @@ function form_validate_input(input) {
 	let error = 0;
 	let input_g_value = input.getAttribute('data-value');
 
-	if (input.getAttribute("name") == "email" || input.classList.contains("_email")) {
+	if (input.getAttribute("name") == "email" || input.classList.contains(" ")) {
 		if (input.value != input_g_value) {
 			let em = input.value.replace(" ", "");
 			input.value = em;

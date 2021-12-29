@@ -4,7 +4,22 @@
   <div class="popup__content">
     <div class="popup__body">
       <div class="popup__close"></div>
-      <div class="popup__header-login">login</div>
+      <div class="popup-header popup-header__login">
+        <h1 class="popup-header__title title">Личный кабинет</h1>
+        <form class="popup-header__form form" action="#">
+          <label class="popup-header__label">
+            <input class="popup-header__input input _email"  type="email" placeholder="E-mail">
+          </label>
+          <label class="popup-header__label">
+            <input class="popup-header__input input"  type="password" placeholder="Пароль">
+          </label>
+          <a class="popup-header__forgot" href="#">Забыли пароль?</a>
+          <div class="popup-header__buttons">
+            <button class="popup-header__sent" type="submit">Войти</button>
+            <button class="popup-header__btn-login" type="button">Зарегистрироваться</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>

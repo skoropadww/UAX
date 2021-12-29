@@ -14,10 +14,12 @@
 		<div class="wrapper">
 			<header class="header">
 	<div class="header__top">
-    <div class="header__container _container">
-      <div class="header__inner">
-        <img src="./img/icons/logo.svg" alt="Логотип сайта" class="logo">
-        <form class="header__top-search search" action="#">
+    <div class="header__container _container _container--header">
+      <div class="header__inner header__inner--header">
+        <a href="#" class="logo">
+          <img src="./img/icons/logo.svg" alt="Логотип сайта" class="logo">
+        </a>
+        <form class="header__top-search search " action="#" data-da=".header__inner--bottom,768,0">
           <input class="search__input" type="text" name="Поиск товара" placeholder="Поиск товара">
           <button class="search__btn"></button>
         </form>
@@ -74,8 +76,16 @@
 	</div>
   <div class="header__bottom">
     <div class="header__container _container">
-      <div class="header__inner">
-        <a class="header__catalog" href="#">Каталог</a>
+      <div class="header__inner header__inner--bottom">
+        <div class="header__catalog">
+          <a class="header__catalog-link" href="#">Каталог</a>
+          <div class="icon-menu icon-menu--catalog">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
         <ul class="manufacturer__list">
           <li><a href="#">Apple</a></li>
           <li><a href="#">Samsung</a></li>
@@ -108,7 +118,7 @@
             </ul>
           </div>
         </div>
-        <div class="header__client client">
+        <div class="header__client client" data-da=".header__inner--header,768,2">
           <div class="client__vip-text">VIP</div>
           <div class="client__name">Иван Иванов</div>
           <a class="client__btn _popup-link" href="#login"></a>
@@ -118,7 +128,16 @@
   </div>
 </header>
 			<main class="page">
-  
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ex quasi a rem ullam molestias molestiae, laudantium optio impedit placeat ducimus nesciunt eos quo, labore consequuntur distinctio nam voluptatem exercitationem.
+          Labore aliquam architecto in praesentium est iure voluptatem! Esse corporis qui odio culpa, laudantium non dolores sint officiis voluptas eveniet, quisquam soluta consequuntur voluptates aliquid. Debitis ducimus in dolor ullam?
+          Tenetur eaque amet aspernatur qui, nesciunt quaerat, quidem repudiandae ipsum reiciendis, iste perferendis ea adipisci placeat eligendi accusantium aut quia. Ad quos laboriosam qui, impedit eveniet cupiditate beatae asperiores amet.
+          Necessitatibus dicta aut qui esse dolor sint non hic itaque accusamus ut nisi natus quod saepe alias blanditiis inventore minus molestiae doloremque, laudantium asperiores odit voluptatem praesentium atque sunt! Quod.
+          Quidem quo, aut optio vero in eveniet facere explicabo molestiae fugiat ad ea consequuntur illum sapiente dolores amet accusamus iusto sunt, dolore dolorem? Quo ipsum consequatur, animi totam exercitationem a?
+          Libero nulla suscipit mollitia fuga placeat dolor eaque id quos modi consectetur, enim asperiores unde est eum ab voluptatem repellat nihil autem exercitationem impedit deserunt totam qui sed. Neque, vitae!
+          Eius quis obcaecati perspiciatis eveniet commodi voluptatum praesentium at tenetur expedita laborum labore quidem adipisci quia, maxime minus magnam incidunt officia ratione facere voluptates aperiam dignissimos cupiditate. Asperiores, quis facere?
+          Libero rerum sed illum asperiores accusantium tempore autem cumque aliquid amet? Ipsum, eius inventore culpa illum perspiciatis distinctio veritatis ea, soluta, quis veniam placeat qui fuga. Earum cupiditate fugit voluptate.
+          Error dolorum omnis accusantium amet suscipit ex nemo, consequuntur sit minima officiis illum ut. Obcaecati atque similique accusamus beatae, fugiat laborum repellat natus, sunt recusandae velit, dolor libero consequuntur nostrum?
+          Amet voluptatem ratione et officiis possimus praesentium perspiciatis similique cumque eos aperiam laudantium, ad ipsum temporibus voluptas dolore officia quam tempore repellat vero porro ea doloribus odio? Odio, eius maxime!
 			</main>
 			<footer class="footer">
 	<div class="footer__container _container">
@@ -269,7 +288,22 @@
   <div class="popup__content">
     <div class="popup__body">
       <div class="popup__close"></div>
-      <div class="popup__header-login">login</div>
+      <div class="popup-header popup-header__login">
+        <h1 class="popup-header__title title">Личный кабинет</h1>
+        <form class="popup-header__form form" action="#">
+          <label class="popup-header__label">
+            <input class="popup-header__input input _email"  type="email" placeholder="E-mail">
+          </label>
+          <label class="popup-header__label">
+            <input class="popup-header__input input"  type="password" placeholder="Пароль">
+          </label>
+          <a class="popup-header__forgot" href="#">Забыли пароль?</a>
+          <div class="popup-header__buttons">
+            <button class="popup-header__sent" type="submit">Войти</button>
+            <button class="popup-header__btn-login" type="button">Зарегистрироваться</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>

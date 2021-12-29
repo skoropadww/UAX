@@ -65,15 +65,87 @@
 	}
 	// .popup__close
 	&__close {
-		width: 26px;
-		height: 25px;
+		width: 16px;
+    height: 16px;
+    padding: 5px;
+    top: 12px;
+    right: 12px;
 		position: absolute;
-		top: 0px;
-		right: 0px;
 		cursor: pointer;
 		z-index: 30;
 		background: url(".././img/icons/close.svg") 0 0 no-repeat;
 	}
 }
 //====================================================================================================
+.popup_login .popup__body{
+  max-width: 540px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.popup-header {
+  &__login {
+    padding: 90px;
+  }
+
+  &__form {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  &__label{
+    margin-bottom: 33px;
+    display: block;
+  }
+
+  &__forgot {
+    margin-bottom: 56px;
+    display: block;
+    color: $mainColor;
+    font-size: 18.72px;
+    line-height: 145%;
+  }
+
+  &__input {
+    font-size: 19px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    padding: 11px 0;
+    border-bottom: 2px solid $mainColor;
+    &:placeholder {
+      color: rgba($mainColor, 0.6);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18.72px;
+    line-height: 145%;
+  }
+
+  &__sent {
+    color: $mainWhite;
+    border: 2px solid $pink-500;
+    background-color: $pink-500;
+    padding: 12px 24px;
+    border-radius: 5px;
+  }
+
+  &__btn-login {
+    color: $mainColor;
+    border: 2px solid $gree-400;
+    padding: 12px 17px;
+    border-radius: 5px;
+  }
+
+
+}
+
 //====================================================================================================

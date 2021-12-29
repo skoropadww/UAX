@@ -2,11 +2,11 @@
 
 //====================================================================================================
 
-/*
+
 //Burger
 .icon-menu {
 	display: none;
-	@media (max-width: $md3+px) {
+	@media (max-width: 768px) {
 		display: block;
 		position: absolute;
 		top: 18px;
@@ -17,12 +17,13 @@
 		z-index: 5;
 		span {
 			transition: all 0.3s ease 0s;
-			top: calc(50% - 1px);
+			top: 15px;
 			left: 0px;
 			position: absolute;
+      border-radius: 5px;
 			width: 100%;
-			height: 2px;
-			background-color: #000;
+			height: 4px;
+			background-color: $mainWhite;
 			&:first-child {
 				top: 0px;
 			}
@@ -44,13 +45,22 @@
 				}
 			}
 		}
+    &--catalog {
+      top: -12px;
+      width: 36px;
+      height: 35px;
+    }
 	}
 }
-*/
+
 .header {
   &__top {
     padding: 60px 0 20px;
     background-color: $dark-500;
+
+    @media (max-width: 768px) {
+      padding-top: 30px;
+    }
   }
 
   &__top-telLink {
@@ -73,6 +83,9 @@
       right: 4px;
       top: 14px;
     }
+    @media (max-width:768px) {
+     display: none;
+    }
   }
 
   &__top-course {
@@ -82,12 +95,19 @@
     line-height: 0.1;
     letter-spacing: 0.05em;
     font-weight: 700;
+    @media (max-width:860px) {
+      display: none;
+    }
   }
 
   &__top-cart {
     font-size: 10px;
     display: flex;
     align-items: center;
+
+    @media (max-width: 860px) {
+      margin-left: 10px;
+    }
   }
 
   &__top-cart-img {
@@ -130,6 +150,10 @@
       margin-bottom: 7px;
       display: inline-block;
     }
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 
   &__bottom {
@@ -140,13 +164,31 @@
   }
 
   &__catalog {
+    position: relative;
+
+    @media (max-width:768px) {
+      margin-left: auto; 
+      width: 60px;     
+    }
+
+    @media (max-width: 420px) {
+      margin-left: 20px;
+      margin-right: 0;
+    }
+  }
+
+  &__catalog-link {
+    color: $mainWhite;
     font-weight: 700;
     font-size: 26px;
     color: $mainWhite;
-    padding-left: 33px;
     position: relative;
-    display: block;
-      
+    padding-left: 33px;
+
+    @media (max-width:768px) {
+      display: none;     
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -193,6 +235,9 @@
       background-size: cover;
       right: 0;
       top: 7px;
+    }
+    @media (max-width:1000px) {
+      display: none;
     }
   }
 }
@@ -246,6 +291,7 @@
       }
     }
   }
+  
 }
 
 .header__top-tel:hover {
@@ -264,6 +310,15 @@
   width: 100%;
   position: relative;
   box-sizing: border-box;
+  margin: 0 10px;
+
+  @media (max-width: 1139px) {
+    max-width: 305px;
+  }
+
+  @media (max-width: 420px) {
+    max-width: 260px;
+  }
 
   &__input {
     width: 100%;
@@ -275,6 +330,23 @@
     font-size: 13px;
     line-height: 1.4;
     letter-spacing: 0.05em; 
+
+    @media (max-width: 1000px) {
+      border-radius: 0;
+      border: none;
+      border-bottom: 2px solid $mainWhite;
+      color: rgba($mainWhite, 1);
+      background: $dark-500;
+      padding-left: 0;
+      padding-top: 10px;
+      padding-right: 10px;
+
+    }
+
+    @media (max-width: 768px) {
+      background-color: transparent;
+    }
+
   }
 
   &__btn {
@@ -287,6 +359,9 @@
     background-image: url(.././img/icons/search.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    @media (max-width:1000px) {
+      right: 0;
+    }
   }
 }
 
@@ -328,6 +403,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media (max-width:768px) {
+    display: none;
+  }
 
   li {
     margin: 0 13px;
@@ -363,6 +441,15 @@
   display: flex;
   align-items: center;
   padding-left: 20px;
+  @media (max-width:1000px) {
+    padding-left: 10px;
+  }
+
+  &__name {
+    @media (max-width:1000px) {
+      display: none;
+    }
+  }
 
   &__vip-text {
     font-size: 12px;
@@ -373,6 +460,10 @@
     border-radius: 20px;
     background-color: $dark-500;
     margin-right: 12px;
+
+    @media (max-width:768px) {
+      display: none;    
+    }
   }
 
   &__btn {
@@ -390,6 +481,9 @@
     &:hover {
       background-color: $pink-500;
     }
+    @media (max-width:1000px) {
+      background-size: cover;
+    }
   }
 
   &__btn.active {
@@ -404,6 +498,9 @@
     width: 2px;
     height: 62px;
     background-color: $dark-500;
+    @media (max-width:1000px) {
+      display: none;
+    }
   }
 }
 
@@ -422,6 +519,9 @@
   transition: opacity 0.3s ease-in;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
+  @media (max-width:1000px) {
+    display: none;
+  }
 
   &__link {
     font-size: 13px;
