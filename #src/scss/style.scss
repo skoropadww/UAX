@@ -109,6 +109,10 @@ body {
     max-width: 166px;
   }
 
+  @media (max-width: 768px) {
+    order: 1;
+  }
+
   @media (max-width: 375px) {
     max-width: 185px;
   }
